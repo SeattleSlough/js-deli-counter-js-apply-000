@@ -1,13 +1,14 @@
-function takeANumber(line, name) {
-  line.push(name);
-  return `Welcome, ${name}. You are number ${line.length} in line.`
+  var i = 0
+function takeANumber(line) {
+  i += 1
+  line.push(i);
+  return `Welcome. Your ticket number is ${i}.`
 }
 
 function nowServing(katzDeliLine) {
   if (katzDeliLine.length > 0) {
-    for(var i = 0; i < katzDeliLine.length; i++) {
-      return `Currently serving ${katzDeliLine.shift(i)}.`
-    }} else {
+      return `Currently serving ${katzDeliLine.shift()}.`
+    } else {
       return "There is nobody waiting to be served!"
     }
 }
